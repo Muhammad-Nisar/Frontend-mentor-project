@@ -1,0 +1,134 @@
+@import url("https://fonts.google.com/specimen/Fraunces,https://fonts.google.com/specimen/Montserrat");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500&display=swap");
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --DARK-CYAN: hsl(158, 36%, 37%);
+  --CREAM: hsl(30, 38%, 92%);
+  --DARK-BLUE: hsl(212, 21%, 14%);
+  --DARK-GRAYISH: hsl(228, 12%, 48%);
+  --WHITE: hsl(0, 0%, 100%);
+  
+
+}
+body{
+  height:100vh;
+  background: var(--CREAM);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  justify-content: center;
+}
+im{
+  max-width: 100%;
+}
+.main{
+  background: whitesmoke;
+  width:330px;
+  height: 580px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px gray;
+
+
+}
+.main figcaption{
+  position: absolute;
+  left:-1000px;
+}
+.main p{
+  font-family: "Montserrat";
+  font-size: 14px;
+  align-self: center;
+  color: VAR(--DARK-GRAYISH);
+  padding: .5rem;
+}
+.main h1{
+  font-family: "Fraunces";
+  color:var(--DARK-BLUE);
+  padding:.5rem;
+}
+.main button{
+  color: white;
+  border-radius: 10px;
+  margin-left: 15px;
+  border:none;
+  width: 90%;
+  margin-top: 20px;
+  padding: 1rem;
+  background: var(--DARK-CYAN);
+ 
+}
+.mobile img{
+ 
+  border-top-left-radius:10px;
+  border-top-right-radius: 10px;
+}
+.price-d{
+  
+  font-family:"Fraunces";
+  color:var(--DARK-CYAN);
+  font-weight: bold;
+  font-size: 1.5rem;
+  
+}
+.price-o{
+  vertical-align: middle;
+  margin:1rem;
+}
+.price{
+  margin-top: 1rem;
+}
+.desktop{
+  display: none;
+}
+@media screen and (min-width: 768px){
+  .mobile{
+    display: none;
+  }
+  .desktop{
+    display: block;
+     }
+  .desktop img{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+     }
+  body{
+    height: 100vh;
+    background: var(--CREAM);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main{
+    width: 740px;
+    height: 500px;
+    
+    background: whitesmoke;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+  }
+  .sec{
+    margin-top: 25px;
+  }
+  .main h1,p{
+    
+    margin:0px 30px;
+  }
+  .main p{
+    justify-content: space-around;
+    font-size: 1rem;
+    padding: .5rem;
+  }
+  .main h1{
+    font-size: 45px;
+    padding: .5rem;
+  
+    
+  }
+ 
+}
